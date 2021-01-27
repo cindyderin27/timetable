@@ -15,6 +15,21 @@ IN ('lundi','mardi','mercredi','jeudi','vendredi','samedi');
 
 4. SELECT courCodeCours FROM Etudiantdeclasse WHERE etudiantMatricule =&matricule;
 
+alter table etudiant add password varchar(50);
+update etudiant set password = ora_hash(matricule) where matricule = valeur;
+
+alter table enseignants add password varchar(50);
+update enseignants set password = ora_hash(matricule) where matricule = valeur;
+
+
+
+
+
+
+
+
+
+
 5. script de l'emploi de temps
 SET ECHO OFF
 SET MARKUP HTML ON SPOOL ON
