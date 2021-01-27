@@ -16,10 +16,10 @@ IN ('lundi','mardi','mercredi','jeudi','vendredi','samedi');
 4. SELECT courCodeCours FROM Etudiantdeclasse WHERE etudiantMatricule =&matricule;
 
 alter table etudiant add password varchar(50);
-update etudiant set password = ora_hash(matricule) where matricule = valeur;
+update etudiant set password = &password(matricule) where matricule = valeur;
 
 alter table enseignants add password varchar(50);
-update enseignants set password = ora_hash(matricule) where matricule = valeur;
+update enseignants set password = &password(matricule) where matricule = valeur;
 
 
 
