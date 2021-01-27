@@ -1,6 +1,9 @@
 # timetable
 3. creation de lobjet
-CREATE VIEW myview AS
+
+
+
+CREATE VIEW Question3 AS
 SELECT DISTINCT C.codeCours, T.jourCoursDate,T. TRANCHE,C.VOLUMEH FROM Cours C
 JOIN Typehoraire T
 ON C.codeCours= T.crsCodeCours
@@ -13,12 +16,15 @@ ON cl.specialiteNomSpec=cls.classSpecialiteNomspec
 WHERE T.jourCoursDate
 IN ('lundi','mardi','mercredi','jeudi','vendredi','samedi') AND cls.classNiveauidNiveau=001;
 
+
+
+
 4. 
 alter table etudiant add password varchar(50);
-update etudiant set password = &password(matricule) where matricule = valeur;
+update etudiant set password =&password(matricule) where matricule =&matricule ;
 
 alter table enseignants add password varchar(50);
-update enseignants set password = &password(matricule) where matricule = valeur;
+update enseignants set password = &password(matricule) where matricule =&matricule;
 
 
 
@@ -26,7 +32,7 @@ update enseignants set password = &password(matricule) where matricule = valeur;
 
 5. script de l'emploi de temps
 SET ECHO OFF
-SET MARKUP HTML ON SPOOL ON
+SET MARKUP HTML ON SPOOL ON 
 SPOOL emploi_temps_TIPAM2.HTML
 SELECT DISTINCT T.jourCoursDate as jours ,
                   C.intituleCourt ||'('||C.codeCours||')' as cours ,
