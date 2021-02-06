@@ -15,4 +15,3 @@ JOIN Classe Cl
 WHERE T.jourCoursDate
  IN ('lundi','mardi','mercredi','jeudi','vendredi','samedi') AND cls.classNiveauidNiveau=001;
 
- SELECT * FROM Question3
