@@ -1,9 +1,9 @@
-CREATE VIEW Question3 AS
+CREATE VIEW ViewQuestion3 AS
 SELECT DISTINCT C.codeCours, 
 T.jourCoursDate,
 T. TRANCHE,
 C.VOLUMEH 
-    FROM Cours C58
+    FROM Cours C1
 JOIN Typehoraire T
     ON C.codeCours= T.crsCodeCours
 JOIN Jourcours J
